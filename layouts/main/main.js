@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link";
+import Link from "../../components/navigation/link/Link";
 import styles from "./index.scss";
 import { Grid, Col, Row } from "react-bootstrap";
 import Avatar from "../../components/images/avatar/Avatar";
@@ -9,15 +9,14 @@ export default class Layout extends React.Component {
         return (
             <Grid className={styles.layout}>
                 <Row>
-                    <Col xs={12}>
+                    <Col xs={12} className={styles.imageContainer}>
                         <Avatar name="header-image" />
-                        <h1>HELLO</h1>
                     </Col>
                 </Row>
                 <Row>
-                    <Col xs={12}>
-                        <Link href="/"><a>home</a></Link>{' '}
-                        <Link href="/about"><a>about</a></Link>
+                    <Col xs={12} className={styles.menuContainer}>
+                        <Link href="/">home</Link>{' | '}
+                        <Link href="/about">about</Link>
                     </Col>
                 </Row>
                 <Row>
