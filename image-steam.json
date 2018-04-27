@@ -1,6 +1,0 @@
-{
-  "storage": {
-    "driver": "fs",
-    "path": "C:/images"
-  }
-}
