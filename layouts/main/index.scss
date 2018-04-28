@@ -7,6 +7,19 @@
     text-align: center;
 }
 
+.headerContent{
+    z-index:3;
+    position:relative;
+}
+
 .menuContainer{
     margin-top:10px;
+}
+
+.header{
+    position:relative;
+    min-height:200px;
+    height:30vh;
+    background-color:purple;
+    overflow:hidden;
 }

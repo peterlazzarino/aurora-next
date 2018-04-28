@@ -1,6 +1,9 @@
 import React from "react";
 import Layout from "../layouts/main/main";
+import { Row } from "react-bootstrap"; 
 import { getCollection } from "../api/cms-api";
+import Highlight from "../components/content/highlight/Highlight";
+import SectionHeading from "../components/atoms/headings/SectionHeading";
 
 export default class About extends React.Component {
     static async getInitialProps({ req }) {
@@ -13,10 +16,12 @@ export default class About extends React.Component {
         const { activities } = this.props;
         return (
             <Layout>
-                <h2>Things I like</h2>
-                {activities.map((activity) => {
-                    return <p>{activity.name}</p>
-                })}
+                <SectionHeading>Things Aurora Likes</SectionHeading>
+                <Row>
+                    {activities.map((activity) => {
+                        return <Highlight name={activity.name} />
+                    })}
+                </Row>
             </Layout>
         );
     }

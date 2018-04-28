@@ -9,9 +9,9 @@ export default class CmsImage extends React.Component{
         };
     }
     async componentWillMount(){
-        const { name } = this.props;
+        const { name, width } = this.props;
         this.setState({
-            path: await getImage(name)
+            path: await getImage(name, width)
         }) 
     }
     render(){

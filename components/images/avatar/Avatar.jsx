@@ -6,7 +6,7 @@ export default class Avatar extends React.Component{
     render(){
         const { name } = this.props;
         return(
-            <CmsImage className={styles.avatar} name={name} />
+            <CmsImage className={styles.avatar} width={120} name={name} />
         )
     }
 }
